@@ -1,0 +1,53 @@
+@page "/editbook/{Id:int}"
+@rendermode InteractiveServer
+@using BookTracker.Models
+@inject BookService BookService
+@inject NavigationManager Navigation
+
+<h3>Edit book</h3>
+
+<EditForm Model="book" OnValidSubmit="UpdateBook">
+
+    <InputText 
+        @bind-Value="book.Title"
+        class="form-control"/>
+
+    <InputText
+        @bind-Value="book.Author"
+        class="form-control"/>
+
+    <InputNumber
+        @bind-Value="book.TotalPages"
+        class="form-control"/>
+
+
+    <button class="btn btn-warning">
+        Update
+    </button>
+
+</EditForm>
+
+@code 
+{
+    [Parameter]
+    public int Id { get; set; }
+
+    private Book book =new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await BookService.GetBookByIdAsync(Id);
+
+        if (result != null)
+        {
+            book = result;
+        }
+    }
+    private async Task UpdateBook()
+    {
+        await BookService.UpdateBookAsync(book);
+        Navigation.NavigateTo("/library");
+    }
+
+}
+

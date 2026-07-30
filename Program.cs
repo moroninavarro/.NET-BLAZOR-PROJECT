@@ -1,10 +1,33 @@
 using BookTracker.Components;
+using BookTracker.Data;
+using BookTracker.Models;
+using BookTracker.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+
+builder.Services.AddDbContext<BookDbContext>(FileOptions =>
+    FileOptions.UseSqlite("Data Source=BookTracker.db"));
+
+builder.Services.AddAuthentication()
+    .AddIdentityCookies();
+
+builder.Services.AddAuthorization();
+
+builder.Services.AddCascadingAuthenticationState();
+
+builder.Services.AddIdentityCore<ApplicationUser>()
+    .AddEntityFrameworkStores<BookDbContext>()
+    .AddSignInManager();
+
+builder.Services.AddScoped<BookService>();
+
 
 var app = builder.Build();
 
@@ -19,6 +42,10 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseStaticFiles();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()

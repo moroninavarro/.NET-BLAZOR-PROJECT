@@ -1,0 +1,29 @@
+@page "/library"
+@rendermode InteractiveServer
+@inject BookService BookService
+@inject NavigationManager Navigation
+
+<h3>My Library</h3>
+
+
+<button @onclick="GoToAddBook"> Add Book </button>
+
+@foreach(var book in books)
+{
+    <div class="border p-2 mb-2">
+        <h5>@book.Title</h5>
+        <p>@book.Author</p>
+    </div>
+}   
+
+@code{
+    private List<Book> books = new();
+        protected override async Task OnInitializedAsync()
+        {
+            books = await BookService.GetBooksAsync();
+        }
+    private void GoToAddBook()
+    {
+        Navigation.NavigateTo("/books/add");
+    }
+}
