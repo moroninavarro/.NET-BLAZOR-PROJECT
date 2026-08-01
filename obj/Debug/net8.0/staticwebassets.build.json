@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "A0Ja0UJ98dL3JpmOe4BWOblNiEHqMTdVfuHnj3LaNs0=",
+  "Hash": "PJuVuFq6LnZephNslfIC7tdCJA0E1//ye3KOzfiaBSQ=",
   "Source": "BookTracker",
   "BasePath": "_content/BookTracker",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "BookTracker\\wwwroot",
       "Source": "BookTracker",
-      "ContentRoot": "C:\\Users\\Usuario1\\BookTracker\\wwwroot\\",
+      "ContentRoot": "c:\\Users\\Usuario1\\BookTracker\\wwwroot\\",
       "BasePath": "_content/BookTracker",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookTracker.styles.css",
+      "Identity": "c:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookTracker.styles.css",
       "SourceId": "BookTracker",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "c:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BookTracker",
       "RelativePath": "BookTracker.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookTracker.styles.css"
+      "OriginalItemSpec": "c:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BookTracker.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookTracker.bundle.scp.css",
+      "Identity": "c:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookTracker.bundle.scp.css",
       "SourceId": "BookTracker",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "c:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BookTracker",
       "RelativePath": "BookTracker.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookTracker.bundle.scp.css"
+      "OriginalItemSpec": "c:\\Users\\Usuario1\\BookTracker\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookTracker.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Usuario1\\BookTracker\\wwwroot\\app.css",
+      "Identity": "c:\\Users\\Usuario1\\BookTracker\\wwwroot\\app.css",
       "SourceId": "BookTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Usuario1\\BookTracker\\wwwroot\\",
+      "ContentRoot": "c:\\Users\\Usuario1\\BookTracker\\wwwroot\\",
       "BasePath": "_content/BookTracker",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Usuario1\\BookTracker\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "c:\\Users\\Usuario1\\BookTracker\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "BookTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Usuario1\\BookTracker\\wwwroot\\",
+      "ContentRoot": "c:\\Users\\Usuario1\\BookTracker\\wwwroot\\",
       "BasePath": "_content/BookTracker",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Usuario1\\BookTracker\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "c:\\Users\\Usuario1\\BookTracker\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "BookTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Usuario1\\BookTracker\\wwwroot\\",
+      "ContentRoot": "c:\\Users\\Usuario1\\BookTracker\\wwwroot\\",
       "BasePath": "_content/BookTracker",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Usuario1\\BookTracker\\wwwroot\\favicon.png",
+      "Identity": "c:\\Users\\Usuario1\\BookTracker\\wwwroot\\favicon.png",
       "SourceId": "BookTracker",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Usuario1\\BookTracker\\wwwroot\\",
+      "ContentRoot": "c:\\Users\\Usuario1\\BookTracker\\wwwroot\\",
       "BasePath": "_content/BookTracker",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

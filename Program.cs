@@ -15,18 +15,21 @@ builder.Services.AddRazorComponents()
 builder.Services.AddDbContext<BookDbContext>(FileOptions =>
     FileOptions.UseSqlite("Data Source=BookTracker.db"));
 
-builder.Services.AddAuthentication()
+builder.Services.AddAuthentication(IdentityConstants.ApplicationScheme)
     .AddIdentityCookies();
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddCascadingAuthenticationState();
-
 builder.Services.AddIdentityCore<ApplicationUser>()
     .AddEntityFrameworkStores<BookDbContext>()
-    .AddSignInManager();
+    .AddSignInManager()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddCascadingAuthenticationState();
+
 
 builder.Services.AddScoped<BookService>();
+
 
 
 var app = builder.Build();
@@ -45,6 +48,7 @@ app.UseStaticFiles();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.UseAntiforgery();
 

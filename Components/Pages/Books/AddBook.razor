@@ -1,14 +1,20 @@
 @page "/books/add"
-@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Identity
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Authorization
 @using BookTracker.Models
+@using System.Security.Claims
+@rendermode InteractiveServer
 @inject BookService BookService
+@using BookTracker.Services
+@inject AuthenticationStateProvider AuthenticationStateProvider
 @inject NavigationManager Navigation
-
+@using Microsoft.AspNetCore.Components.Authorization
 
 <h3>Add Book</h3>
 
 
-<EditForm Model="newBook" OnValidSubmit="SaveBook">
+<EditForm Model="newBook" OnValidSubmit="SaveBook" FormName="AddBookForm">
     <DataAnnotationsValidator />
     <ValidationSummary />
 
@@ -44,8 +50,29 @@
     private Book newBook = new();
     private async Task SaveBook()
     {
-        await BookService.AddBookAsync(newBook);
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
 
+        if(user.Identity?.IsAuthenticated != true)
+        {
+            Navigation.NavigateTo("/login");
+            return;
+        
+        }
+
+        var userId = user.FindFirst(
+           ClaimTypes.NameIdentifier
+            )?.Value;
+
+        if(userId == null)
+        {
+             Navigation.NavigateTo("/login");
+                return;
+        }
+
+        newBook.UserId = userId;
+
+        await BookService.AddBookAsync(newBook);
         Navigation.NavigateTo("/library");
     }
 }

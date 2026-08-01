@@ -5,6 +5,9 @@ namespace BookTracker.Models;
 
     public class Book
     {
+        public string UserId { get; set; } = string.Empty;
+        public ApplicationUser? User { get; set; }
+        
         public int BookId { get; set; }
 
         [Required]

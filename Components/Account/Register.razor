@@ -2,12 +2,13 @@
 
 @using Microsoft.AspNetCore.Identity
 @using BookTracker.Models
+@rendermode InteractiveServer
 @inject UserManager<ApplicationUser> UserManager
 @inject NavigationManager Navigation
 
 <h3>Create Account</h3>
 
-<EditForm Model="model" OnValidSubmit="RegisterUser">
+<EditForm Model="model" OnValidSubmit="RegisterUser" FormName="RegisterForm">
     <div>
         <label>Email</label>
         <InputText @bind-Value="model.Email" />
@@ -15,19 +16,26 @@
 
     <div>
         <label>Password</label>
-        <InputText type="password" @bind-Value="model.Password" />
+        <InputText @bind-Value="model.Password" type="password" />
     </div>
 
     <button type="submit">Register</button>
 
 </EditForm>
 
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p style="color:red">@errorMessage</p>
+}
+
 
 @code{
     private RegisterModel model = new();
+    private string errorMessage = "";
 
     private async Task RegisterUser()
     {
+
         var user = new ApplicationUser
         {
             UserName = model.Email,
@@ -39,6 +47,10 @@
         if (result.Succeeded)
         {
             Navigation.NavigateTo("/login");
+        }
+        else
+        {
+            errorMessage = string.Join(", ", result.Errors.Select(e => e.Description));
         }
     }
 

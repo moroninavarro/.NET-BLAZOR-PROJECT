@@ -1,7 +1,11 @@
 @page "/library"
 @rendermode InteractiveServer
 @inject BookService BookService
+@using BookTracker.Services
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@using Microsoft.AspNetCore.Components.Authorization
 @inject NavigationManager Navigation
+@using System.Security.Claims
 
 <h3>My Library</h3>
 
@@ -20,7 +24,26 @@
     private List<Book> books = new();
         protected override async Task OnInitializedAsync()
         {
-            books = await BookService.GetBooksAsync();
+        
+        var authState = await AuthenticationStateProvider
+            .GetAuthenticationStateAsync();
+
+            var user = authState.User;
+
+            if(user.Identity?.IsAuthenticated != true)
+            {
+                Navigation.NavigateTo("/login");
+                return;
+            }
+           
+        var userId = user.FindFirst(
+            ClaimTypes.NameIdentifier
+            )?.Value;
+
+            if(userId != null)
+            {
+                books = await BookService.GetBooksAsync(userId);
+            }
         }
     private void GoToAddBook()
     {

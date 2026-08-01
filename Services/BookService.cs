@@ -13,9 +13,11 @@ public class BookService
         _context = context;
     }
 
-    public async Task<List<Book>> GetBooksAsync()
+    public async Task<List<Book>> GetBooksAsync(string userId)
     {
-        return await _context.Books.ToListAsync();
+        return await _context.Books
+            .Where(b => b.UserId == userId)
+            .ToListAsync();
     }
 
     public async Task AddBookAsync(Book book)
