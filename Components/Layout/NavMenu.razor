@@ -2,7 +2,8 @@
 
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">BookTracker</a>
+        <a class="navbar-brand" href="">
+            <i class="bi bi-book-half me-2"></i>BookTracker</a>
     </div>
 </div>
 
@@ -11,27 +12,23 @@
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
     <nav class="flex-column">
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            <NavLink class="nav-link flex align-items-center" href="" Match="NavLinkMatch.All">
+                <i class="bi bi-house-door-fill me-2" aria-hidden="true"></i> Home
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="library" Match="NavLinkMatch.All">
-                <span class="bi bi-book" aria-hidden="true"></span> Library
+            <NavLink class="nav-link" href="/library" Match="NavLinkMatch.All">
+                <i class="bi bi-book-fill me-2" aria-hidden="true"></i> Library
             </NavLink>
         </div>
 
         <AuthorizeView>
             <Authorized>
 
-                <div class="nav-item px-3">
-                    <span class="nav-link">
-                        Welcome, @context.User.Identity?.Name
-                    </span>
-                </div>
 
                <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="logout">
+                    <NavLink class="nav-link" href="/logout">
+                    <i class="bi bi-box-arrow-right me-2" aria-hidden="true"></i>
                         Logout
                     </NavLink>
                 </div>
@@ -40,13 +37,13 @@
 
             <NotAuthorized>
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="login">
+                    <NavLink class="nav-link" href="/login">
                         Login
                     </NavLink>
                 </div>
 
                 <div class="nav-item px-3">
-                    <NavLink class="nav-link" href="register">
+                    <NavLink class="nav-link" href="/register">
                         Register
                     </NavLink>
                 </div>
