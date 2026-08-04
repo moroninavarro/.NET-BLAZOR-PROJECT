@@ -1,30 +1,20 @@
 @page "/login"
+@rendermode InteractiveServer
 @using Microsoft.AspNetCore.Identity
 @using BookTracker.Models
-@rendermode InteractiveServer
-@inject UserManager<ApplicationUser> UserManager
 @inject SignInManager<ApplicationUser> SignInManager
-
-@using BookTracker.Services
 @inject NavigationManager Navigation
+@using System.ComponentModel.DataAnnotations
 
 <h3>Login</h3>
 
-<EditForm Model="model" OnValidSubmit="LoginUser" FormName="LoginForm">
-
-    <div>
-        <label>Email</label>
-        <InputText @bind-Value="model.Email" />
-    </div>
-
-    <div>
-        <label>Password</label>
-        <InputText type="password" @bind-Value="model.Password" />
-    </div>
-
+<form method="post" action="/auth/login">
+    <input name="email" placeholder="Email" required />
+    <input name="password" type="password" placeholder="Password" required />
     <button type="submit">Login</button>
+</form>
 
-</EditForm>
+
 
 @if (!string.IsNullOrEmpty(errorMessage))
 {
@@ -32,40 +22,33 @@
 }
 
 @code{
-     private LoginModel model = new();
+    private LoginModel model = new();
     private string errorMessage = "";
 
     private async Task LoginUser()
     {
-        var user = await UserManager.FindByEmailAsync(model.Email);
+        errorMessage = "";
 
+        var result = await SignInManager.PasswordSignInAsync(
+            model.Email, model.Password, isPersistent: true, lockoutOnFailure: false);
 
-        if (user == null)
-        {
-            errorMessage = "Invalid email or password";
-            return;
-        }
-      var result = await SignInManager.PasswordSignInAsync(
-        user,
-        model.Password,
-        true,
-        false
-        );
         if (result.Succeeded)
         {
-            Navigation.NavigateTo("/library");
+            Navigation.NavigateTo("/library", true);
         }
         else
         {
-            errorMessage = "Invalid email or password";
-        
+            errorMessage = "Invalid email or password.";
         }
-
     }
 
     public class LoginModel
     {
+        [Required]
+        [EmailAddress]
         public string Email { get; set; } = "";
+
+        [Required]
         public string Password { get; set; } = "";
     }
 }

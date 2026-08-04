@@ -32,16 +32,18 @@ public class BookService
         await _context.SaveChangesAsync();
     }
 
-    public async Task DeleteBookAsync(int id)
+    public async Task DeleteBookAsync(int bookId, string userId)
     {
-        var book = await _context.Books.FindAsync(id);
+        var book = await _context.Books.FirstOrDefaultAsync(b => 
+        b.BookId == bookId && 
+        b.UserId == userId);
 
-        if (book != null)
+        if (book == null)
         {
-            _context.Books.Remove(book);
-
-            await _context.SaveChangesAsync();
+            return;
         }
+        _context.Books.Remove(book);
+        await _context.SaveChangesAsync();
     }
 
     public async Task<Book?> GetBookByIdAsync(int id)

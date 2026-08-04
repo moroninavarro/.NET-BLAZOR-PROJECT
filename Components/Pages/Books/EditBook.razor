@@ -1,50 +1,145 @@
-@page "/editbook/{Id:int}"
+@page "/books/edit/{BookId:int}"
 @rendermode InteractiveServer
+@attribute [Authorize]
+@using Microsoft.AspNetCore.Authorization
 @using BookTracker.Models
 @inject BookService BookService
+@using BookTracker.Services
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@using Microsoft.AspNetCore.Components.Authorization
 @inject NavigationManager Navigation
+@using System.Security.Claims
 
-<h3>Edit book</h3>
+<div class="container pb-5">
+
+<h3 class="fw-bold fs-4">Edit book</h3>
 
 <EditForm Model="book" OnValidSubmit="UpdateBook">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
 
-    <InputText 
-        @bind-Value="book.Title"
-        class="form-control"/>
+    <div class="mb-3">
+        <label>Title</label>
 
-    <InputText
-        @bind-Value="book.Author"
-        class="form-control"/>
+        <InputText 
+            @bind-Value="book.Title"
+            class="form-control"/>
+    </div>
+        
+    <div class="mb-3">
+        <label>Author</label>
+        <InputText
+            @bind-Value="book.Author"
+            class="form-control"/>
+    </div>
 
-    <InputNumber
-        @bind-Value="book.TotalPages"
-        class="form-control"/>
+    <div class="mb-3">
+        <label>Genre</label>
+        <InputText
+            @bind-Value="book.Genre"
+            class="form-control"/>
+    </div>
 
 
-    <button class="btn btn-warning">
-        Update
-    </button>
+    <div class="mb-3">
+        <label>Current Page</label>
+        <InputNumber
+            @bind-Value="book.CurrentPage"
+            class="form-control"/>
+    </div>
+
+    <div class="mb-3">
+        <label>Status</label>
+        <InputSelect @bind-Value="book.Status" class="form-select">
+            <option value="Want to Read">Want to Read</option>
+            <option value="Reading">Reading</option>
+            <option value="Finished">Finished</option>
+        </InputSelect>   
+    </div>
+
+    <div class="mb-3">
+        <label>Rating</label>
+        <InputSelect @bind-Value="book.Rating" class="form-select">
+            <option value="0">Not Rating</option>
+            <option value="1">⭐ </option>
+            <option value="2">⭐⭐ </option>
+            <option value="3">⭐⭐⭐ </option>
+            <option value="4">⭐⭐⭐⭐  </option>
+            <option value="5">⭐⭐⭐⭐⭐ </option>
+        </InputSelect>   
+    </div>
+
+    <div class="mb-3">
+        <label>Total pages</label>
+        <InputNumber
+            @bind-Value="book.TotalPages"
+            class="form-control"/>
+    </div>
+
+
+    <div class="mb-3">
+        <label>Notes</label>
+        <InputTextArea
+            @bind-Value="book.Notes"
+            class="form-control"
+            rows="4" />   
+    </div>
+
+
+        <button class="btn btn-warning">
+            Update
+        </button>
 
 </EditForm>
 
+</div>
 @code 
 {
     [Parameter]
-    public int Id { get; set; }
+    public int BookId { get; set; }
 
     private Book book =new();
 
     protected override async Task OnInitializedAsync()
     {
-        var result = await BookService.GetBookByIdAsync(Id);
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        
 
-        if (result != null)
+        if (user.Identity?.IsAuthenticated != true)
         {
-            book = result;
+            Navigation.NavigateTo("/login");
+            return;
         }
+
+        var userId = user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        var existingBook = await BookService.GetBookByIdAsync(BookId);
+
+        if (existingBook == null || existingBook.UserId != userId)
+        {
+            Navigation.NavigateTo("/library");
+            return;
+        }
+
+        book = existingBook;
     }
     private async Task UpdateBook()
     {
+        if(book.CurrentPage > book.TotalPages)
+        {
+            book.CurrentPage = book.TotalPages;
+        }
+            
+        if(book.Status == "Finished")
+        {
+            book.CurrentPage = book.TotalPages;
+            book.FinishDate = DateTime.Today;
+        }
+        else {
+            book.FinishDate = null;
+        }
+           
+        
         await BookService.UpdateBookAsync(book);
         Navigation.NavigateTo("/library");
     }

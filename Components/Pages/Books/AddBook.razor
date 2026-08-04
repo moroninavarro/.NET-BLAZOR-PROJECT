@@ -11,9 +11,9 @@
 @inject NavigationManager Navigation
 @using Microsoft.AspNetCore.Components.Authorization
 
-<h3>Add Book</h3>
+<h3 class="fw-bold fs-4">Add Book</h3>
 
-
+<div class="container pb-5">
 <EditForm Model="newBook" OnValidSubmit="SaveBook" FormName="AddBookForm">
     <DataAnnotationsValidator />
     <ValidationSummary />
@@ -34,20 +34,75 @@
 </div>
 
 <div class="mb-3">
+    <label>Genre</label>
+    <InputText
+        @bind-Value="newBook.Genre"
+        class="form-control"/>
+</div>
+
+
+<div class="mb-3">
+    <label>Current Page</label>
+    <InputNumber
+        @bind-Value="newBook.CurrentPage"
+        class="form-control"/>
+</div>
+
+<div class="mb-3">
+    <label>Status</label>
+    <InputSelect @bind-Value="newBook.Status" class="form-select">
+        <option value="Want to Read">Want to Read</option>
+        <option value="Reading">Reading</option>
+        <option value="Finished">Finished</option>
+    </InputSelect>   
+</div>
+
+<div class="mb-3">
+    <label>Rating</label>
+    <InputSelect @bind-Value="newBook.Rating" class="form-select">
+        <option value="0">Not Rating</option>
+        <option value="1">⭐ </option>
+        <option value="2">⭐⭐ </option>
+        <option value="3">⭐⭐⭐ </option>
+        <option value="4">⭐⭐⭐⭐  </option>
+        <option value="5">⭐⭐⭐⭐⭐ </option>
+    </InputSelect>   
+</div>
+
+<div class="mb-3">
     <label>Total pages</label>
     <InputNumber
         @bind-Value="newBook.TotalPages"
         class="form-control"/>
 </div>
 
+
+<div class="mb-3">
+    <label>Notes</label>
+    <InputTextArea
+        @bind-Value="newBook.Notes"
+        class="form-control"
+        rows="4" />   
+</div>
+
+
     <button class="btn btn-success">
         Save
     </button>
 
-</EditForm>
 
+</EditForm>
+</div>
 @code{
-    private Book newBook = new();
+    private Book newBook = new()
+    {
+        CurrentPage = 0,
+        Status = "Want to Read",
+        Rating = 0,
+        StartDate = DateTime.Today
+    };
+
+    
     private async Task SaveBook()
     {
         var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
