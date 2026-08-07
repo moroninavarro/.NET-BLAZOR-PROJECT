@@ -1,7 +1,28 @@
 ﻿@page "/"
+@using Microsoft.AspNetCore.Components.Authorization
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<AuthorizeView>
+    <Authorized Context="auth">
+        
+        <h1>
+            Hello, @auth.User.Identity?.Name!
+        </h1>
+        <p>
+            Please go to your Library to start adding books.
+        </p>
+    </Authorized>
 
-Welcome to your BookTracker app.
+    <NotAuthorized>
+        <h1>
+            Hello, world!
+        </h1>
+        <p>
+            Welcome to your BookTracker.
+        </p>
+         <p>
+            Please, create an account to start tracking your books.
+        </p>
+    </NotAuthorized>
+</AuthorizeView>
