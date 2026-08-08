@@ -15,21 +15,21 @@
 
 
 
-<div class="row">
+<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
 
 
 
 @foreach(var book in books)
 {
-    <div class="bcol-md-4 mb-4">
-        <div class="card shadow-sm h-100">
+    <div class="col">
+        <div class="card h-100 shadow-sm">
             <div class="card-body">
-                <h5 class="card-title fw-bold fs-4">@book.Title</h5>
-                <p class="text-muted">Author: @book.Author</p>
-                <p class="mt-3"><strong>Genre: </strong>@(string.IsNullOrEmpty(book.Genre) ? "Not specified" : book.Genre)</p>
-                 <p class="card-text">Total Pages: @book.TotalPages</p>
+                <h5 class="card-title fw-bold">@book.Title</h5>
+                <p class="text-muted mb-2">Author: @book.Author</p>
+                <p class="mb-2"><strong>Genre: </strong>@(string.IsNullOrEmpty(book.Genre) ? "Not specified" : book.Genre)</p>
+                 <p class="mb-2">Total Pages: @book.TotalPages</p>
 
-                <p>
+                <p class="mb-2">
                     <strong>Status: </strong>
                     @if(book.Status == "Finished")
                     {
@@ -49,7 +49,7 @@
 
                  @if(book.Rating > 0)
                     {
-                        <p>
+                        <p class="mb-2">
                             Rating:
                         @for(int i =0; i < book.Rating; i++)
                             {
@@ -60,7 +60,7 @@
 
                 <hr />
 
-                <p>
+                <p class="mb-2">
                     <strong>Progress</strong>
 
                 </p>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
 
-            <p class="small text-muted">
+            <p class="small text-muted mb-2">
                 @book.CurrentPage / @book.TotalPages pages
                 (@GetProgress(book)%)
             </p>
@@ -88,16 +88,23 @@
                 @onchange="(e) => UpdateProgress(book)" />
 
            
+            <div class="mt-3">
+                <strong>Notes:</strong>
 
-            @if(!string.IsNullOrEmpty(book.Notes))
-            {
-                <p>
-                    <strong>Notes:</strong>
-                    @book.Notes
-                </p>
-            }
+                <textarea class="form-control mt-2"
+                    rows="4"
+                    wrap="soft"
+                    placeholder="Write a note..."
+                    style="resize: none; overflow-y: auto; overflow-wrap: anywhere;"
+                    @bind="book.Notes"
+                    @bind:event="oninput"
+                    @onblur="() => SaveNotes(book)">
+                </textarea>
 
-        <div class="mt-3">
+            </div>
+
+           
+        <div class="card-footer bg-transparent border-0">
             <button class="btn btn-outline-primary btn-sm me-2"
                 @onclick="() => EditBook(book.BookId)">
                 Edit
@@ -181,6 +188,11 @@
             else
                 book.Status = "Reading";
         }
+    }
+
+    private async Task SaveNotes(Book book)
+    {
+        await BookService.UpdateBookAsync(book);
     }
 
 
