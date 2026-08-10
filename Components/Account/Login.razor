@@ -1,10 +1,11 @@
 @page "/login"
 @rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components
 @using Microsoft.AspNetCore.Identity
 @using BookTracker.Models
 @inject SignInManager<ApplicationUser> SignInManager
 @inject NavigationManager Navigation
-@using System.ComponentModel.DataAnnotations
+
 
 <h3>Login</h3>
 
@@ -14,41 +15,14 @@
     <button type="submit">Login</button>
 </form>
 
-
-
-@if (!string.IsNullOrEmpty(errorMessage))
+@if (Error == "invalid")
 {
-    <p style="color:red">@errorMessage</p>
+    <p class="text-danger mt-2">
+        Invalid email or password.
+    </p>
 }
 
 @code{
-    private LoginModel model = new();
-    private string errorMessage = "";
-
-    private async Task LoginUser()
-    {
-        errorMessage = "";
-
-        var result = await SignInManager.PasswordSignInAsync(
-            model.Email, model.Password, isPersistent: true, lockoutOnFailure: false);
-
-        if (result.Succeeded)
-        {
-            Navigation.NavigateTo("/library", true);
-        }
-        else
-        {
-            errorMessage = "Invalid email or password.";
-        }
-    }
-
-    public class LoginModel
-    {
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; } = "";
-
-        [Required]
-        public string Password { get; set; } = "";
-    }
+    [SupplyParameterFromQuery(Name = "error")]
+    private string? Error { get; set; }
 }
