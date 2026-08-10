@@ -7,20 +7,64 @@
 @inject NavigationManager Navigation
 
 
-<h3>Login</h3>
+<PageTitle>Login - BookTracker</PageTitle>
 
-<form method="post" action="/auth/login">
-    <input name="email" placeholder="Email" required />
-    <input name="password" type="password" placeholder="Password" required />
-    <button type="submit">Login</button>
-</form>
+<div class="login-container">
+    <div class="login-card">
+        <div class="login-header">
+            <i class="bi bi-book-half"></i>
+            <h1>Welcome Back!</h1>
+            <p>Login to your BookTracker account</p>
+        </div>
 
-@if (Error == "invalid")
-{
-    <p class="text-danger mt-2">
-        Invalid email or password.
-    </p>
-}
+        <form method="post" action="/auth/login">
+        <div class="form-group">
+            <label for="email">Email</label>
+
+            <div class="input-container">
+                <i class="bi bi-envelope"></i>
+                <input id="email" 
+                name="email" 
+                type="email"
+                placeholder="Enter your email"
+                required />
+            </div>
+        </div>
+            
+        <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-container">
+                <i class="bi bi-envelope"></i>
+                <input id="password" 
+                name="password"
+                type="password"
+                placeholder="Enter your password" 
+                required />
+            </div>
+        </div>
+
+        @if (Error == "invalid")
+        {
+            <p class="login-error">
+                <i class="bi bi-exclamation-circle"></i>
+                Invalid email or password.
+            </p>
+        }
+
+        <button type="submit" class="login-button">
+            <i class="bi bi-box-arrow-in-right"></i>
+            Login
+            </button>
+        </form>
+
+        <div class="login-footer">
+            <span>Don't have an account?</span>
+            <a href="/register">Create an account</a>
+        </div>
+
+    </div>
+
+</div>
 
 @code{
     [SupplyParameterFromQuery(Name = "error")]

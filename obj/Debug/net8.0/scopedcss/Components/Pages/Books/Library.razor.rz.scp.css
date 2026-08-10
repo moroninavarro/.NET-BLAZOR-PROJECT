@@ -1,0 +1,9 @@
+.rating-star[b-ifc92gait9]{
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.1s ease;
+}
+
+.rating-star:hover[b-ifc92gait9] {
+    transform: scale(1.15);
+}
