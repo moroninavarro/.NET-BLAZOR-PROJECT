@@ -1,5 +1,12 @@
 ﻿@page "/"
 @using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Identity
+@using BookTracker.Models
+@inject UserManager<ApplicationUser> UserManager
+
+@* Page used to handle what the user will see in the Home if he is 
+authenticated or not *@
+
 
 <PageTitle>Home</PageTitle>
 
@@ -7,7 +14,7 @@
     <Authorized Context="auth">
         
         <h1>
-            Hello, @auth.User.Identity?.Name!
+            Hello, @fullName!
         </h1>
         <p>
             Please go to your Library to start adding books.
@@ -37,3 +44,21 @@
         </NavLink>
     </NotAuthorized>
 </AuthorizeView>
+
+
+@code {
+    private string fullName ="";
+    [CascadingParameter]
+    private Task<AuthenticationState> AuthenticationStateTask { get; set; } = default!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateTask;
+        var user = await UserManager.GetUserAsync(authState.User);
+
+        if (user != null)
+        {
+            fullName = user.FullName;
+        }
+    }
+}

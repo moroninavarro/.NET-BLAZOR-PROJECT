@@ -7,6 +7,8 @@
 @rendermode InteractiveServer
 @inject NavigationManager Navigation
 
+@* Page used to handle the Register form to the users.
+This form validates user information before register. *@
 
 <PageTitle>Register - BookTracker</PageTitle>
 
@@ -21,6 +23,14 @@
 
 <EditForm Model="model" OnValidSubmit="RegisterUser" FormName="RegisterForm">
     
+    <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <InputText id="fullname"
+                class="form-control"
+                @bind-Value="model.FullName"
+                placeholder="Enter your Full Name" />
+    </div>
+
     <div class="form-group">
             <label for="email">Email</label>
             <InputText id="email"
@@ -74,9 +84,11 @@
         errorMessage = "";
 
         var user = new ApplicationUser
-         { UserName = model.Email,
-          Email = model.Email 
-          };
+        { 
+            UserName = model.Email,
+            Email = model.Email,
+            FullName = model.FullName
+        };
 
 
         var result = await UserManager.CreateAsync(user, model.Password);
@@ -94,6 +106,7 @@
 
     public class RegisterModel
     {
+        public string FullName { get; set; } = "";
         public string Email { get; set; } = "";
         public string Password { get; set; } = "";
     }

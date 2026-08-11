@@ -4,6 +4,11 @@ using BookTracker.Models;
 
 namespace BookTracker.Endpoints;
 
+/// <summary>
+/// This defines authentication endpoint used by BookTracker.
+/// Handles login requests and authentication cookie creation
+/// using ASP.NET Core Identity.
+/// </summary>
 public static class AuthEndpoints
 {
     public static void MapAuthEndpoints(this WebApplication app)

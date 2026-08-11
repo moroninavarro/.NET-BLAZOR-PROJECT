@@ -127,8 +127,10 @@ C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\staticwebassets\msbuild.buildMult
 C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BookTracker.props
 C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\scopedcss\Components\Account\Login.razor.rz.scp.css
+C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\scopedcss\Components\Account\Register.razor.rz.scp.css
 C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
+C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\scopedcss\Components\Pages\Books\Library.razor.rz.scp.css
 C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\scopedcss\bundle\BookTracker.styles.css
 C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\scopedcss\projectbundle\BookTracker.bundle.scp.css
 C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\BookTrac.1DE1174D.Up2Date
@@ -137,5 +139,3 @@ C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\refint\BookTracker.dll
 C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\BookTracker.pdb
 C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\BookTracker.genruntimeconfig.cache
 C:\Users\Usuario1\BookTracker\obj\Debug\net8.0\ref\BookTracker.dll
-c:\Users\Usuario1\BookTracker\obj\Debug\net8.0\scopedcss\Components\Account\Register.razor.rz.scp.css
-c:\Users\Usuario1\BookTracker\obj\Debug\net8.0\scopedcss\Components\Pages\Books\Library.razor.rz.scp.css
