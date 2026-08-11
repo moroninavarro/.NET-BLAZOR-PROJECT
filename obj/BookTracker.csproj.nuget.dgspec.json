@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario1\\BookTracker\\BookTracker.csproj": {}
+    "c:\\Users\\Usuario1\\BookTracker\\BookTracker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario1\\BookTracker\\BookTracker.csproj": {
+    "c:\\Users\\Usuario1\\BookTracker\\BookTracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario1\\BookTracker\\BookTracker.csproj",
+        "projectUniqueName": "c:\\Users\\Usuario1\\BookTracker\\BookTracker.csproj",
         "projectName": "BookTracker",
-        "projectPath": "C:\\Users\\Usuario1\\BookTracker\\BookTracker.csproj",
+        "projectPath": "c:\\Users\\Usuario1\\BookTracker\\BookTracker.csproj",
         "packagesPath": "C:\\Users\\Usuario1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario1\\BookTracker\\obj\\",
+        "outputPath": "c:\\Users\\Usuario1\\BookTracker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario1\\AppData\\Roaming\\NuGet\\NuGet.Config"
