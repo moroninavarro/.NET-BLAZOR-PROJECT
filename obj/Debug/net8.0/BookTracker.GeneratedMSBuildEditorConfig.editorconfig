@@ -9,71 +9,71 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BookTracker
 build_property.RootNamespace = BookTracker
-build_property.ProjectDir = c:\Users\Usuario1\BookTracker\
+build_property.ProjectDir = C:\Users\Usuario1\BookTracker\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\Usuario1\BookTracker
+build_property.MSBuildProjectDirectory = C:\Users\Usuario1\BookTracker
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/Usuario1/BookTracker/Components/Account/Logout.razor]
+[C:/Users/Usuario1/BookTracker/Components/Account/Logout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XExvZ291dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Usuario1/BookTracker/Components/App.razor]
+[C:/Users/Usuario1/BookTracker/Components/App.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Usuario1/BookTracker/Components/Pages/Books/AddBook.razor]
+[C:/Users/Usuario1/BookTracker/Components/Pages/Books/AddBook.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCb29rc1xBZGRCb29rLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Usuario1/BookTracker/Components/Pages/Books/DeleteBook.razor]
+[C:/Users/Usuario1/BookTracker/Components/Pages/Books/DeleteBook.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCb29rc1xEZWxldGVCb29rLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Usuario1/BookTracker/Components/Pages/Books/Details.razor]
+[C:/Users/Usuario1/BookTracker/Components/Pages/Books/Details.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCb29rc1xEZXRhaWxzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Usuario1/BookTracker/Components/Pages/Books/EditBook.razor]
+[C:/Users/Usuario1/BookTracker/Components/Pages/Books/EditBook.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCb29rc1xFZGl0Qm9vay5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Usuario1/BookTracker/Components/Pages/Error.razor]
+[C:/Users/Usuario1/BookTracker/Components/Pages/Error.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Usuario1/BookTracker/Components/Pages/Home.razor]
+[C:/Users/Usuario1/BookTracker/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Usuario1/BookTracker/Components/Routes.razor]
+[C:/Users/Usuario1/BookTracker/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Usuario1/BookTracker/Components/_Imports.razor]
+[C:/Users/Usuario1/BookTracker/Components/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/Usuario1/BookTracker/Components/Account/Login.razor]
+[C:/Users/Usuario1/BookTracker/Components/Account/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XExvZ2luLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-877qxw1arf
 
-[c:/Users/Usuario1/BookTracker/Components/Account/Register.razor]
+[C:/Users/Usuario1/BookTracker/Components/Account/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBY2NvdW50XFJlZ2lzdGVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-1nzw8wtnjm
 
-[c:/Users/Usuario1/BookTracker/Components/Layout/MainLayout.razor]
+[C:/Users/Usuario1/BookTracker/Components/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-rxc1dtumwn
 
-[c:/Users/Usuario1/BookTracker/Components/Layout/NavMenu.razor]
+[C:/Users/Usuario1/BookTracker/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-4u1u30zyuc
 
-[c:/Users/Usuario1/BookTracker/Components/Pages/Books/Library.razor]
+[C:/Users/Usuario1/BookTracker/Components/Pages/Books/Library.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xCb29rc1xMaWJyYXJ5LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-ifc92gait9

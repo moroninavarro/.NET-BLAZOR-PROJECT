@@ -2,7 +2,10 @@ using System.Globalization;
 using System.ComponentModel.DataAnnotations;
 
 namespace BookTracker.Models;
-
+/// <summary>
+/// This class contains information about the book, reading progress,
+/// rating, and reading the status.
+/// </summary>
     public class Book
     {
         public string UserId { get; set; } = string.Empty;
