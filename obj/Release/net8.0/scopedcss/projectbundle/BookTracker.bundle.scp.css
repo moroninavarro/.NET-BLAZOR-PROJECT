@@ -1,0 +1,451 @@
+/* _content/BookTracker/Components/Account/Login.razor.rz.scp.css */
+
+.login-container[b-877qxw1arf] {
+    min-height: calc(100vh - 3.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+.login-card[b-877qxw1arf] {
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0.15);
+}
+
+.login-header[b-877qxw1arf] {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header i[b-877qxw1arf]{
+    font-size: 3rem;
+    color: blueviolet;
+}
+
+.login-header h1[b-877qxw1arf] {
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.login-header p[b-877qxw1arf] {
+    margin: 0;
+    color: #6c757d;
+}
+
+.form-group[b-877qxw1arf] {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label[b-877qxw1arf] {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-container[b-877qxw1arf] {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+
+.input-container i[b-877qxw1arf] {
+    padding-left: 1rem;
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.input-container input[b-877qxw1arf] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.input-container:focus-within[b-877qxw1arf] {
+    border-color: #0d6efd;
+    box-shadow:  0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.login-error[b-877qxw1arf]{
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-error[b-877qxw1arf]{
+    margin-right: 0.3rem;
+}
+
+
+.login-button[b-877qxw1arf]{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem;
+    background-color: #0d6efd;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-button:hover[b-877qxw1arf]{
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+.login-footer[b-877qxw1arf]{
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.login-footer a[b-877qxw1arf] {
+    margin-left: 0.3rem;
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover[b-877qxw1arf] {
+    text-decoration: underline;
+}
+/* _content/BookTracker/Components/Account/Register.razor.rz.scp.css */
+
+.login-container[b-1nzw8wtnjm] {
+    min-height: calc(100vh - 3.5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+.login-card[b-1nzw8wtnjm] {
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0.15);
+}
+
+.login-header[b-1nzw8wtnjm] {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header i[b-1nzw8wtnjm]{
+    font-size: 3rem;
+    color: blueviolet;
+}
+
+.login-header h1[b-1nzw8wtnjm] {
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.login-header p[b-1nzw8wtnjm] {
+    margin: 0;
+    color: #6c757d;
+}
+
+.form-group[b-1nzw8wtnjm] {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label[b-1nzw8wtnjm] {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.input-container[b-1nzw8wtnjm] {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+
+.input-container i[b-1nzw8wtnjm] {
+    padding-left: 1rem;
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.input-container input[b-1nzw8wtnjm] {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.input-container:focus-within[b-1nzw8wtnjm] {
+    border-color: #0d6efd;
+    box-shadow:  0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.login-error[b-1nzw8wtnjm]{
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+.login-error[b-1nzw8wtnjm]{
+    margin-right: 0.3rem;
+}
+
+
+.login-button[b-1nzw8wtnjm]{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem;
+    background-color: #0d6efd;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-button:hover[b-1nzw8wtnjm]{
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+}
+
+.login-footer[b-1nzw8wtnjm]{
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.login-footer a[b-1nzw8wtnjm] {
+    margin-left: 0.3rem;
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover[b-1nzw8wtnjm] {
+    text-decoration: underline;
+}
+/* _content/BookTracker/Components/Layout/MainLayout.razor.rz.scp.css */
+.page[b-rxc1dtumwn] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-rxc1dtumwn] {
+    flex: 1;
+}
+
+.sidebar[b-rxc1dtumwn] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-rxc1dtumwn] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-rxc1dtumwn]  a, .top-row[b-rxc1dtumwn]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-rxc1dtumwn]  a:hover, .top-row[b-rxc1dtumwn]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-rxc1dtumwn]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row[b-rxc1dtumwn] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-rxc1dtumwn]  a, .top-row[b-rxc1dtumwn]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-rxc1dtumwn] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-rxc1dtumwn] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-rxc1dtumwn] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-rxc1dtumwn]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-rxc1dtumwn], article[b-rxc1dtumwn] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+#blazor-error-ui[b-rxc1dtumwn] {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss[b-rxc1dtumwn] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+/* _content/BookTracker/Components/Layout/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-4u1u30zyuc] {
+    appearance: none;
+    cursor: pointer;
+    width: 3.5rem;
+    height: 2.5rem;
+    color: white;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") no-repeat center/1.75rem rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler:checked[b-4u1u30zyuc] {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.top-row[b-4u1u30zyuc] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-4u1u30zyuc] {
+    font-size: 1.1rem;
+}
+
+
+.nav-item[b-4u1u30zyuc] {
+    font-size: 0.9rem;
+    padding-bottom: 0.8rem;
+}
+
+    .nav-item:first-of-type[b-4u1u30zyuc] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-4u1u30zyuc] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-4u1u30zyuc]  .nav-link {
+        color: #d7d7d7;
+        background: none;
+        border: none;
+        border-radius: 18px;
+        height: 3.2rem;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        width: 100%;
+    }
+
+.nav-item[b-4u1u30zyuc]  a.active {
+    background-color: rgba(255,255,255,0.37);
+    color: white;
+}
+
+.nav-item[b-4u1u30zyuc]  .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+}
+
+.nav-scrollable[b-4u1u30zyuc] {
+    display: none;
+}
+
+.navbar-toggler:checked ~ .nav-scrollable[b-4u1u30zyuc] {
+    display: block;
+}
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-4u1u30zyuc] {
+        display: none;
+    }
+
+    .nav-scrollable[b-4u1u30zyuc] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+
+        /* Allow sidebar to scroll for tall menus */
+        height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+}
+
+/* _content/BookTracker/Components/Pages/Books/Library.razor.rz.scp.css */
+.rating-star[b-ifc92gait9]{
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.1s ease;
+}
+
+.rating-star:hover[b-ifc92gait9] {
+    transform: scale(1.15);
+}
