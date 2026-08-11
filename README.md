@@ -2,6 +2,43 @@
 * MORONI ALANIS NAVARRO
 
 
+# BookTracker
+
+BookTracker is a .NET Blazor Web application designed to help users
+organize and track their personal book collections.
+
+Users can create an account, add books to their personal library,
+track reading progress, manage reading status, add notes, and rate 
+their books.
+
+---
+
+## Project Overview
+
+BookTracker was developed as a Blazor Web Application using ASP.NET Core 
+and C#.
+
+The application is designed for readers who want a simple way to organize their books and keep track of their reading progress in one place.
+
+Each user has a personal library where they can manage their own books
+after creating an account ang logging in.
+
+## Application Structure
+
+The application is organized into several main areas:
+## Components
+
+Contains the Blazor pages and user interface components used by the application.
+
+Example include:
+
+- Home
+- Login 
+- Register
+- Library
+- Add book
+- Edit Book
+
 ## User Guide
 
 ### 1. Creating an Account
@@ -12,7 +49,7 @@
 4. Select the **Register** button.
 5. After registration, you'll be redirected to the Login page.
 
-### 2. Loggin In
+### 2. Logging In
 
 1. Enter your email and password.
 2. Select the **Login** button.
@@ -23,7 +60,7 @@
 1. Open **Library**.
 2. Select **Add Book**.
 3. Enter the book information.
-4. Select **Add Book** button.
+4. Select the **Add Book** button.
 5. The book will be displayed in your personal library.
 
 ### 4. Managing Books
@@ -48,6 +85,6 @@ Users can rate a book directly from its card.
 
 Hover over the stars to preview a rating and click a star to save the selected rating.
 
-### 7. Loggin Out
+### 7. Logging Out
 
 Select **Logout** from the navigation menu to end the current session.
